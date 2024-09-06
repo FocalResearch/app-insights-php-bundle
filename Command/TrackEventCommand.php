@@ -38,6 +38,7 @@ final class TrackEventCommand extends Command
     protected function configure() : void
     {
         $this
+            ->setName(self::NAME)
             ->setDescription('[<info>App Insights</info>] Track Event.')
             ->addArgument('name', InputArgument::REQUIRED, 'Event name')
             ->addOption('properties', null, InputOption::VALUE_OPTIONAL, 'Event additional properties passed as json object')
