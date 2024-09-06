@@ -38,6 +38,7 @@ final class TrackDependencyCommand extends Command
     protected function configure() : void
     {
         $this
+            ->setName(self::NAME)
             ->setDescription('[<info>App Insights</info>] Track Dependency.')
             ->addArgument('name', InputArgument::REQUIRED, 'Dependency name')
             ->addOption('type', null, InputOption::VALUE_OPTIONAL, 'Dependency type', '')
