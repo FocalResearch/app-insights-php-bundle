@@ -38,6 +38,7 @@ final class TrackExceptionCommand extends Command
     protected function configure() : void
     {
         $this
+            ->setName(self::NAME)
             ->setDescription('[<info>App Insights</info>] Track Exception.')
             ->addArgument('class', InputArgument::OPTIONAL, 'Exception class', '\\Exception')
             ->addArgument('message', InputArgument::OPTIONAL, 'Exception message', '')
