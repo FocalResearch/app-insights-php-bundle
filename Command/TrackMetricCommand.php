@@ -39,6 +39,7 @@ final class TrackMetricCommand extends Command
     protected function configure() : void
     {
         $this
+            ->setName(self::NAME)
             ->setDescription('[<info>App Insights</info>] Track Metric.')
             ->addArgument('name', InputArgument::REQUIRED, 'Metric name')
             ->addArgument('value', InputArgument::REQUIRED, 'Metric value')
